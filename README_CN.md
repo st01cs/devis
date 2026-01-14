@@ -9,7 +9,6 @@
 - **结构化访谈** (`/intv`) - 通过深度访谈明确需求、技术方案和权衡
 - **渐进式实现** (`/impl`) - 基于 Manus 风格的工作流程，使用文件系统作为外部记忆
 - **上下文工程** - 基于 Manus AI 代理最佳实, 生成 `task_plan.md`、`findings.md`、`progress.md` 三个核心文件
-- **Git Worktree 支持** - 在隔离的工作树中安全开发
 - **上下文工程** - 基于 Manus 被收购前的生产级 AI 代理最佳实践
 
 ## 安装
@@ -66,7 +65,6 @@ devis 采用两阶段工作流：
 
 **实现过程：**
 
-- 自动在 `.worktrees/` 下创建 Git Worktree
 - 按阶段执行计划，每完成一个阶段更新状态
 - 记录所有错误和解决方案
 - 使用"2-Action 规则"防止丢失多模态信息
@@ -112,7 +110,7 @@ devis/
 # 2. 实现功能
 /devis:impl dev-docs/plan/feature-xxx/task_plan.md
 
-# 自动创建 worktree、按阶段实现、记录进度
+# 按阶段实现、记录进度
 ```
 
 ## 进阶用法
@@ -127,10 +125,6 @@ nano ~/.claude/plugins/devis/templates/task_plan.md
 ```
 
 ## 常见问题
-
-### Q: 为什么需要 Git Worktree？
-
-A: Worktree 提供隔离的开发环境，避免在主分支上直接修改。所有更改在完成后才合并回主分支。
 
 ### Q: 如何恢复中断的工作？
 

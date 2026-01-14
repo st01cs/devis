@@ -29,7 +29,6 @@ Export the directory containing the $ARGUMENTS file as an environment variable n
 
 - Write code strictly according to the plan, do not exceed the scope, and proceed in small steps quickly.
 - Work like Manus: Use persistent markdown files as your "working memory on disk."
-- Make sure to use `git worktree`. First, create a `git worktree` directory under `$PROJECT_ROOT/.worktrees`, then work within the newly created `worktree` directory. Do not commit code or merge back to the `main` branch unless explicitly instructed otherwise.
 
 ## The Core Pattern
 

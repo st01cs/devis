@@ -9,7 +9,6 @@
 - **Structured Interviewing** (`/devis:intv`) - Clarify requirements, technical solutions, and trade-offs through in-depth interviews
 - **Progressive Implementation** (`/devis:impl`) - Manus-style workflow using the filesystem as external memory
 - **Context Engineering** - Based on Manus AI agent best practices, generates three core files: `task_plan.md`, `findings.md`, `progress.md`
-- **Git Worktree Support** - Develop safely in isolated working trees
 - **Context Engineering** - Built on production-grade AI agent best practices from pre-acquisition Manus
 
 ## Installation
@@ -66,7 +65,6 @@ Use the `/devis:impl` command to implement according to plan:
 
 **Implementation Process:**
 
-- Automatically creates Git Worktree under `.worktrees/`
 - Executes plan phase by phase, updating status after each completion
 - Records all errors and solutions
 - Uses "2-Action Rule" to prevent loss of multimodal information
@@ -112,7 +110,7 @@ devis/
 # 2. Implement feature
 /devis:impl dev-docs/plan/feature-xxx/task_plan.md
 
-# Automatically creates worktree, implements by phases, tracks progress
+# Implements by phases, tracks progress
 ```
 
 ## Advanced Usage
@@ -127,10 +125,6 @@ nano ~/.claude/plugins/devis/templates/task_plan.md
 ```
 
 ## FAQ
-
-### Q: Why do we need Git Worktree?
-
-A: Worktree provides an isolated development environment, avoiding direct modifications on the main branch. All changes are merged back to main branch only after completion.
 
 ### Q: How to resume interrupted work?
 
