@@ -10,7 +10,7 @@ Here's the current plan:
 
 Interview me in detail using the AskUserQuestion tool about literally anything: technical implementation, UI & UX, concerns, tradeoffs, etc. but make sure the questions are not obvious.
 
-**_ Interview me in Chinese, and generate plan in English. _**
+**_ Interview me in English, and generate plan in English. _**
 
 Be very in-depth and continue interviewing me continually until it's complete, then create three files in the same directory as `$ARGUMENTS`:
 

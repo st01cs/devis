@@ -19,7 +19,8 @@
 在 Claude Code 中执行：
 
 ```bash
-claude plugin install st01cs/devis
+/plugin marketplace add st01cs/devis
+/plugin install devis@devis
 ```
 
 ### 方法 2: 手动安装
@@ -44,7 +45,7 @@ devis 采用两阶段工作流：
 使用 `/intv` 命令进行需求访谈：
 
 ```bash
-/intv path/to/your/plan.md
+/devis:intv path/to/your/plan.md
 ```
 
 **访谈过程：**
@@ -60,7 +61,7 @@ devis 采用两阶段工作流：
 使用 `/impl` 命令按计划实现：
 
 ```bash
-/impl path/to/your/plan.md
+/devis:impl path/to/your/plan.md
 ```
 
 **实现过程：**
@@ -100,7 +101,7 @@ devis/
 # 在项目目录创建文件 dev-docs/plan/feature-xxx/feature-draft.md简单描述需求
 
 # 1. 访谈需求
-/intv dev-docs/plan/feature-xxx/feature-draft.md
+/devis:intv dev-docs/plan/feature-xxx/feature-draft.md
 
 # 访谈中会问：设计偏好、状态管理方式、兼容性要求等
 # 访谈结束后自动生成三个文件：
@@ -109,7 +110,7 @@ devis/
 # - dev-docs/plan/feature-xxx/progress.md
 
 # 2. 实现功能
-/impl dev-docs/plan/feature-xxx/task_plan.md
+/devis:impl dev-docs/plan/feature-xxx/task_plan.md
 
 # 自动创建 worktree、按阶段实现、记录进度
 ```

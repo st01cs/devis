@@ -6,8 +6,8 @@
 
 ## Key Features
 
-- **Structured Interviewing** (`/intv`) - Clarify requirements, technical solutions, and trade-offs through in-depth interviews
-- **Progressive Implementation** (`/impl`) - Manus-style workflow using the filesystem as external memory
+- **Structured Interviewing** (`/devis:intv`) - Clarify requirements, technical solutions, and trade-offs through in-depth interviews
+- **Progressive Implementation** (`/devis:impl`) - Manus-style workflow using the filesystem as external memory
 - **Context Engineering** - Based on Manus AI agent best practices, generates three core files: `task_plan.md`, `findings.md`, `progress.md`
 - **Git Worktree Support** - Develop safely in isolated working trees
 - **Context Engineering** - Built on production-grade AI agent best practices from pre-acquisition Manus
@@ -19,7 +19,8 @@
 Run in Claude Code:
 
 ```bash
-claude plugin install st01cs/devis
+/plugin marketplace add st01cs/devis
+/plugin install devis@devis
 ```
 
 ### Method 2: Manual Installation
@@ -36,15 +37,15 @@ git clone https://github.com/st01cs/devis.git ~/.claude/plugins/devis
 devis adopts a two-stage workflow:
 
 ```
-User Requirements → /intv (Interview) → Planning Docs → /impl (Implementation) → Final Delivery
+User Requirements → /devis:intv (Interview) → Planning Docs → /devis:impl (Implementation) → Final Delivery
 ```
 
 ### Step 1: Interview & Plan
 
-Use the `/intv` command for requirements interview:
+Use the `/devis:intv` command for requirements interview:
 
 ```bash
-/intv path/to/your/plan.md
+/devis:intv path/to/your/plan.md
 ```
 
 **Interview Process:**
@@ -57,10 +58,10 @@ Use the `/intv` command for requirements interview:
 
 ### Step 2: Implement
 
-Use the `/impl` command to implement according to plan:
+Use the `/devis:impl` command to implement according to plan:
 
 ```bash
-/impl path/to/your/plan.md
+/devis:impl path/to/your/plan.md
 ```
 
 **Implementation Process:**
@@ -100,7 +101,7 @@ devis/
 # Create a file dev-docs/plan/feature-xxx/feature-draft.md with a simple description of requirements
 
 # 1. Interview requirements
-/intv dev-docs/plan/feature-xxx/feature-draft.md
+/devis:intv dev-docs/plan/feature-xxx/feature-draft.md
 
 # Interview will ask: design preferences, state management, compatibility requirements, etc.
 # After interview, three files are automatically generated:
@@ -109,7 +110,7 @@ devis/
 # - dev-docs/plan/feature-xxx/progress.md
 
 # 2. Implement feature
-/impl dev-docs/plan/feature-xxx/task_plan.md
+/devis:impl dev-docs/plan/feature-xxx/task_plan.md
 
 # Automatically creates worktree, implements by phases, tracks progress
 ```
@@ -133,7 +134,7 @@ A: Worktree provides an isolated development environment, avoiding direct modifi
 
 ### Q: How to resume interrupted work?
 
-A: Simply run `/impl path/to/task_plan.md` again, it will read existing files and continue from the current phase.
+A: Simply run `/devis:impl path/to/task_plan.md` again, it will read existing files and continue from the current phase.
 
 ## Acknowledgments
 
