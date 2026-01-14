@@ -1,0 +1,21 @@
+{
+  "name": "devis",
+  "version": "0.1.0",
+  "description": "Interviewing to understand requirements, and then implementing them using a Manus-style approach.",
+  "author": {
+    "name": "st01cs",
+    "email": "stoics@163.com"
+  },
+  "repository": "https://github.com/st01cs/devis",
+  "license": "MIT",
+  "keywords": [
+    "planning",
+    "manus",
+    "workflow",
+    "markdown",
+    "context-engineering",
+    "task-management",
+    "hooks",
+    "templates"
+  ]
+}

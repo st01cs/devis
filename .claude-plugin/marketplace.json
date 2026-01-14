@@ -1,0 +1,15 @@
+{
+  "name": "devis",
+  "owner": {
+    "name": "st01cs",
+    "url": "https://github.com/st01cs"
+  },
+  "plugins": [
+    {
+      "name": "devis",
+      "source": "./",
+      "description": "Interviewing to understand requirements, and then implementing them using a Manus-style approach.",
+      "version": "0.1.0"
+    }
+  ]
+}
